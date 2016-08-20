@@ -16,7 +16,7 @@
     <Thickness x:Key="DataGridRow.BorderThickness" Bottom="0" Left="0" Right="0" Top="1" />
 
     <!--  表格外边框颜色  -->
-    <SolidColorBrush x:Key="DataGrid.BorderBrush" Color="#E9ECF1" />
+    <SolidColorBrush x:Key="DataGrid.BorderBrush" Color="#CCCEDB" />
     <!--  列头背景色  -->
     <SolidColorBrush x:Key="ColumnHeader.Background" Color="#EEEEF2" />
     <!--  列头背景色  -->
