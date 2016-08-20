@@ -1,0 +1,41 @@
+﻿<Window x:Class="Demo.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:System="clr-namespace:System;assembly=mscorlib"
+        xmlns:Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero2"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:local="clr-namespace:Demo"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" Title="MainWindow"
+        Width="525" Height="350" mc:Ignorable="d">
+    <Window.Resources>
+
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="DataGridStyle.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <DataGrid x:Name="dgDbConfig" Margin="10" VerticalAlignment="Top" VerticalContentAlignment="Center">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn Width="5*" Header="机构名称">
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <TextBlock Text="{Binding OrgName}" ToolTip="{Binding OrgName}" />
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+                <DataGridTextColumn Width="3*"
+                                    Binding="{Binding Ip}"
+                                    Header="IP地址" />
+                <DataGridTextColumn Width="2*"
+                                    Binding="{Binding Port}"
+                                    Header="端口号" />
+                <DataGridTextColumn Width="2*"
+                                    Binding="{Binding UserName}"
+                                    Header="用户名" />
+                <DataGridTextColumn Width="2*"
+                                    Binding="{Binding Password}"
+                                    Header="密码" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>
